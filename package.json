@@ -1,0 +1,18 @@
+{
+  "name": "sing-up",
+  "version": "1.0.0",
+  "description": "Desafio de fazer uma aplicação com sig-up e sing-in com JWT e busca de usuários.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server/index.js"
+  },
+  "author": "Cristiano Stavarengo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.5"
+  }
+}
