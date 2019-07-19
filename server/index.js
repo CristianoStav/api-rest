@@ -1,5 +1,5 @@
 const api = require('./config/express'),
-    port = 3000,
+    port = process.env.PORT || 3000,
     mongoose = require('mongoose');
 require('dotenv').config();
 
