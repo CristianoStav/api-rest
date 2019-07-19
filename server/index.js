@@ -1,12 +1,13 @@
 const api = require('./config/express'),
     port = 3000,
     mongoose = require('mongoose');
+require('dotenv').config();
 
 api.use(require('./routes/routes'));
 
 api.set('secret', 'super_secret');
 
-mongoose.connect('mongodb+srv://criszu:cris123@teste-pv7yh.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(process.env.CONNECTION_MONGO, {
     useNewUrlParser: true,
 });
 

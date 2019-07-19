@@ -16,7 +16,7 @@ module.exports = {
             return res.status(400).json({ mensagem: "Já existe um usuário com este e-mail!" });
         }
 
-        const token = jwt.sign({ email: email }, "super_secret", { expiresIn: 1800 });
+        const token = jwt.sign({ email: email }, process.env.SECRET, { expiresIn: 1800 });
         const cadastro = await modelSingUp.create({
             _id, nome, email, senha, telefones, ultimoLogin, token
         });
