@@ -23,10 +23,4 @@ module.exports = {
 
         return res.status(201).json(cadastro);
     },
-
-    async getUsers(req, res) {
-        const users = await modelSingUp.find();
-
-        return res.status(200).json(users);
-    }
 }
