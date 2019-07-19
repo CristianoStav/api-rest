@@ -8,19 +8,18 @@ const SingUpSchema = new Schema({
     },
     nome: {
         type: String,
-        required: true
     },
     email: {
         type: String,
-        required: true
+
     },
     senha: {
         type: String,
-        required: true
+
     },
     telefones: {
         type: Array,
-        required: true
+
     },
     ultimoLogin: {
         type: Date,
