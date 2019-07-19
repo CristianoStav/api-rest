@@ -2,10 +2,34 @@ const mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 const SingUpSchema = new Schema({
-    nome: String,
-    email: String,
-    senha: String,
-    telefones: Array
+    _id: {
+        type: String,
+        required: true
+    },
+    nome: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    senha: {
+        type: String,
+        required: true
+    },
+    telefones: {
+        type: Array,
+        required: true
+    },
+    ultimoLogin: {
+        type: Date,
+        required: true
+    },
+    token: {
+        type: String,
+        required: true
+    },
 }, {
         timestamps: true
     });
