@@ -21,6 +21,10 @@ module.exports = {
             _id, nome, email, senha, telefones, ultimoLogin, token
         });
 
+        cadastro.updateOne({
+            ultimoLogin: new Date()
+        });
+        
         return res.status(201).json(cadastro);
     },
 }
